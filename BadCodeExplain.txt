@@ -1,0 +1,25 @@
+Reid Schneyer
+2/5/19
+
+Homework 4 
+
+-Does this class use encapsulation/information hiding?
+It does not use either design guideline. The instance variable "x" is a public variable, which means that a client programmer could
+change it in unintended ways, instead of using a mutator method.
+
+-Does this class follow the given guidelines for accessor and mutator methods?
+Unsurprisingly, it does not follow the accessor/mutator method guidelines. The method "getMethod" (which is an awful method name) returns the
+instance string variable "s", but it also sets "x" to 0. This also violates the "avoid side effects" part of the class design guidelines
+
+-Does the class describe a cohesive abstraction? If so, what? If not, why not?
+Not really. Besides setting, returning, and changing a string and an int, the class doesn't really seem to have any purpose, let alone a single abstraction.
+
+-Is the interface convenient? Is it clear?
+It's hard to say if the interface is convenient, as it's hard to tell what the interface is actually trying to do. I do think that it isn't very clear, the method names are
+very vague. As an example, the method "sampleMethod(int y)" returns the sum of the argument y and the instance variable x. Without reading the documentation for the method,
+it's impossible to even guess what it does.
+
+-Does it use a consistent naming case?
+The naming case is barely consistent. It does use camelCase, which makes it readable, but the method names give no indication as to what they do. Also, the variable names
+are just as bad. (In my opinion) single letter variable names should be reserved for "throwaway" variables, like the ones used in for loops.
+
