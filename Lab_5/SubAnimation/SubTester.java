@@ -26,18 +26,20 @@ public class SubTester{
 
         final BlockingQueue<String> queue = new LinkedBlockingQueue<String>();
         queue.add("Freeze");
-
+        freezeButton.setEnabled(false);
         final SubAnimator animator = new SubAnimator(panel, queue);
 
         freezeButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent event){
                 queue.add("Freeze");
                 moveButton.setEnabled(true);
+                freezeButton.setEnabled(false);
             }
         }); 
         moveButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent event){
                 moveButton.setEnabled(false);
+                freezeButton.setEnabled(true);
                 queue.add("Move");
             }
         });

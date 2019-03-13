@@ -1,5 +1,5 @@
 import java.util.*;
-import java.util.Random;;
+import java.util.Random;
 import java.util.concurrent.*;
 
 public class SubAnimator implements Runnable{
@@ -16,7 +16,7 @@ public class SubAnimator implements Runnable{
                 String command = queue.take();
                 if(command.equals("Move")){
                     Thread.sleep(DELAY);
-                    subPanel.setValues(rg.nextDouble()*250,rg.nextDouble()*250);
+                    subPanel.setValues();
                     if(!"Freeze".equals(queue.peek())){
                         queue.add("Move");
                     }
